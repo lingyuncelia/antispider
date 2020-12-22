@@ -13,11 +13,11 @@ async def startup(uri):
             # 不断的向服务器发送信息，并打印输出信息发送内容和时间
             await converse.send(message)
             print('{time}-Client send: {message}'
-                  .format(time=datetime.now().strftime('%Y-%m-%d %H:%M:%S'), message=message))
+            .format(time=datetime.now().strftime('%Y-%m-%d %H:%M:%S'), message=message))
             # 不断的读取服务器推送给客户端的信息，并打印输出信息内容和时间
             mes = await converse.receive()
             print('{time}-Client receive: {rec}'
-                  .format(time=datetime.now().strftime('%Y-%m-%d %H:%M:%S'), rec=mes))
+            .format(time=datetime.now().strftime('%Y-%m-%d %H:%M:%S'), rec=mes))
 
 
 if __name__ == '__main__':
